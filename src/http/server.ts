@@ -21,7 +21,7 @@ app.post('/polls', async (request, reply)=>{
         }
     })
 
-    return {pollId:poll.id}
+    return reply.status(201).send({pollId:poll.id})
 })
 
 app.listen({
